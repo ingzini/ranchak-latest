@@ -15,7 +15,7 @@ class RecipesController < ApplicationController
     
     def create
         @recipe = Recipe.new(recipe_params)
-        @recipe.chef = Chef.find(2)
+        @recipe.chef = Chef.find(4)
         
         if @recipe.save
             flash[:success] = "your recipe was created succesfully!"
@@ -24,6 +24,22 @@ class RecipesController < ApplicationController
             render :new
         end
     
+    end
+    
+    def edit
+        @recipe = Recipe.find(params[:id])
+    end
+    
+    def update
+        @recipe = Recipe.find(params[:id])
+        if @recipe.update(recipe_params)
+            #do nothing
+            flash[:success] = "Your Recipe is updated Successfully"
+            redirect_to recipes_path(@recipe)
+        else
+            render :edit
+        end
+        
     end
 
 private
