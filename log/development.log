@@ -7904,3 +7904,381 @@ Cannot render console from 49.200.196.8! Allowed networks: 127.0.0.1, ::1, 127.0
 
 Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 49.200.196.8 at 2016-01-16 15:11:05 +0000
 Cannot render console from 49.200.196.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 49.249.128.21 at 2016-01-16 16:34:05 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 143ms (Views: 141.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 49.249.128.21 at 2016-01-16 16:34:07 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (1.4ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mChef Load (0.3ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered recipes/index.html.erb within layouts/application (44.9ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 210ms (Views: 197.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/recipes/5" for 49.249.128.21 at 2016-01-16 16:34:10 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mChef Load (0.1ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered recipes/show.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 127ms (Views: 123.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes/5/edit" for 49.249.128.21 at 2016-01-16 16:34:14 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered recipes/_form.html.erb (4.6ms)
+  Rendered recipes/edit.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 126ms (Views: 124.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/recipes/5" for 49.249.128.21 at 2016-01-16 16:34:51 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eWQyU2uQJhMxQMCIRsR1HpG9+nwHIOu0zUiRi2lwqZpVslIy2QSblixVG10VrfLROSCC3zFvyxmHi7taVPRKeQ==", "recipe"=>{"name"=>"Edited :Muya awandru2", "summary"=>"muya awandrum bahaikhe songnai", "description"=>"muya awandrum bahaikhe songnai\r\nmuya awandrum bahaikhe songnai\r\nmuya awandrum bahaikhe songnai"}, "commit"=>"Edit Recipe", "id"=>"5"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "recipes" SET "name" = ?, "updated_at" = ? WHERE "recipes"."id" = ?  [["name", "Edited :Muya awandru2"], ["updated_at", "2016-01-16 16:34:51.145685"], ["id", 5]]
+  [1m[36m (10.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://xebii-ingzini.c9users.io/recipes.5
+Completed 302 Found in 19ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/recipes.5" for 49.249.128.21 at 2016-01-16 16:34:51 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#index as 
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered recipes/index.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 186ms (Views: 184.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 49.249.128.21 at 2016-01-16 16:41:16 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 94ms (Views: 93.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/new" for 49.249.128.21 at 2016-01-16 16:41:23 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#new as HTML
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered recipes/_form.html.erb (6.0ms)
+  Rendered recipes/new.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 204ms (Views: 202.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipes" for 49.249.128.21 at 2016-01-16 16:41:30 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NpkST57kpr3rrCZp8HR/giVnI9amk24UL+QNK+6r7gwaT3IuLHAbOPa5/byjHfhNjfpbdZDcTrllJyf60y8N7w==", "recipe"=>{"name"=>"", "summary"=>"", "description"=>""}, "commit"=>"Create Recipe"}
+  [1m[36mChef Load (0.9ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered shared/_errors.html.erb (2.4ms)
+  Rendered recipes/_form.html.erb (6.8ms)
+  Rendered recipes/new.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 135ms (Views: 124.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 49.249.128.21 at 2016-01-16 16:41:37 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 95ms (Views: 94.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 49.249.128.21 at 2016-01-16 16:41:38 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChef Load (0.1ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered recipes/index.html.erb within layouts/application (57.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 151ms (Views: 149.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes/5" for 49.249.128.21 at 2016-01-16 16:41:44 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered recipes/show.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 147ms (Views: 145.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipes/5/edit" for 49.249.128.21 at 2016-01-16 16:41:46 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered recipes/_form.html.erb (4.5ms)
+  Rendered recipes/edit.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 144ms (Views: 142.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/recipes/5" for 49.249.128.21 at 2016-01-16 16:41:49 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nvDTDzQdAdD8GYuRI6f7paWMbV6JIRPawtVKfNQOC2yyJrNuhom8VeEMUERwznxqDREV/b9uM3eIFmCt6Yrojw==", "recipe"=>{"name"=>"Edited :Muya awandru21", "summary"=>"muya awandrum bahaikhe songnai", "description"=>"muya awandrum bahaikhe songnai\r\nmuya awandrum bahaikhe songnai\r\nmuya awandrum bahaikhe songnai"}, "commit"=>"Edit Recipe", "id"=>"5"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "recipes" SET "name" = ?, "updated_at" = ? WHERE "recipes"."id" = ?  [["name", "Edited :Muya awandru21"], ["updated_at", "2016-01-16 16:41:49.784203"], ["id", 5]]
+  [1m[36m (8.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://xebii-ingzini.c9users.io/recipes.5
+Completed 302 Found in 193ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/recipes.5" for 49.249.128.21 at 2016-01-16 16:41:50 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#index as 
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered recipes/index.html.erb within layouts/application (177.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 318ms (Views: 316.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/5" for 49.249.128.21 at 2016-01-16 16:56:27 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_page_title.html.erb (0.5ms)
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered recipes/show.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 139ms (Views: 136.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes/5/edit" for 49.249.128.21 at 2016-01-16 16:56:30 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_page_title.html.erb (0.1ms)
+  Rendered shared/_errors.html.erb (0.2ms)
+  Rendered recipes/_form.html.erb (162.1ms)
+  Rendered recipes/edit.html.erb within layouts/application (167.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 260ms (Views: 258.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/recipes/5" for 49.249.128.21 at 2016-01-16 16:56:33 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AGH5wUHwLHMVTKULcI/uvIEtgkBQ865xEHmsFhwZvHwst5mg82SR9ghZft4j5mlzKbD642a8jtxauobHIZ1fnw==", "recipe"=>{"name"=>"Edited :Muya awandru213", "summary"=>"muya awandrum bahaikhe songnai", "description"=>"muya awandrum bahaikhe songnai\r\nmuya awandrum bahaikhe songnai\r\nmuya awandrum bahaikhe songnai"}, "commit"=>"Edit Recipe", "id"=>"5"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "recipes" SET "name" = ?, "updated_at" = ? WHERE "recipes"."id" = ?  [["name", "Edited :Muya awandru213"], ["updated_at", "2016-01-16 16:56:33.687023"], ["id", 5]]
+  [1m[36m (12.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://xebii-ingzini.c9users.io/recipes.5
+Completed 302 Found in 18ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/recipes.5" for 49.249.128.21 at 2016-01-16 16:56:34 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#index as 
+  Rendered shared/_page_title.html.erb (0.4ms)
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered recipes/index.html.erb within layouts/application (64.5ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 228ms (Views: 226.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 49.249.128.21 at 2016-01-16 16:56:37 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 125ms (Views: 124.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 49.249.128.21 at 2016-01-16 16:56:39 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#index as HTML
+  Rendered shared/_page_title.html.erb (0.1ms)
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered recipes/index.html.erb within layouts/application (139.9ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 259ms (Views: 255.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/new" for 49.249.128.21 at 2016-01-16 16:56:40 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#new as HTML
+  Rendered shared/_page_title.html.erb (0.1ms)
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered recipes/_form.html.erb (4.8ms)
+  Rendered recipes/new.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 122ms (Views: 120.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipes" for 49.249.128.21 at 2016-01-16 16:56:59 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OzcS/GhnEpKntuYXcJ2IB+ZlwXdz936rrKwdewDqfBwX4XKd2vOvF7qjPcIj9A/ITvi51EW4XgbmbzeqPW6f/w==", "recipe"=>{"name"=>"muya gudok", "summary"=>"", "description"=>""}, "commit"=>"Create Recipe"}
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered shared/_errors.html.erb (1.2ms)
+  Rendered recipes/_form.html.erb (5.7ms)
+  Rendered recipes/new.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 116ms (Views: 109.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/recipes" for 49.249.128.21 at 2016-01-16 16:58:04 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Sch/g4e03/thisfv5FzjcVGRS/64qWV6s4hn65bVwf1lHh/iNSBifnyfHDq3NWS++QwzXY7mRdf5S006q1EiHg==", "recipe"=>{"name"=>"muya gudok", "summary"=>"muya gudok bahaikhe khlai", "description"=>"1. moso ridi\r\n2. muya ridi(chikon chikon khe raui\r\n3. muya wathwi wngna nangnai\r\n4. that all"}, "commit"=>"Create Recipe"}
+  [1m[36mChef Load (0.4ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "recipes" ("name", "summary", "description", "chef_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "muya gudok"], ["summary", "muya gudok bahaikhe khlai"], ["description", "1. moso ridi\r\n2. muya ridi(chikon chikon khe raui\r\n3. muya wathwi wngna nangnai\r\n4. that all"], ["chef_id", 4], ["created_at", "2016-01-16 16:58:04.193510"], ["updated_at", "2016-01-16 16:58:04.193510"]]
+  [1m[35m (13.1ms)[0m  commit transaction
+Redirected to https://xebii-ingzini.c9users.io/recipes
+Completed 302 Found in 26ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/recipes" for 49.249.128.21 at 2016-01-16 16:58:04 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#index as HTML
+  Rendered shared/_page_title.html.erb (0.1ms)
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered recipes/index.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 130ms (Views: 127.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 49.249.128.21 at 2016-01-16 16:58:23 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 166ms (Views: 165.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 49.249.128.21 at 2016-01-16 16:58:26 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#index as HTML
+  Rendered shared/_page_title.html.erb (0.1ms)
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered recipes/index.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 153ms (Views: 150.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes/6" for 49.249.128.21 at 2016-01-16 16:58:42 +0000
+Cannot render console from 49.249.128.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered shared/_page_title.html.erb (0.1ms)
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered recipes/show.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 116ms (Views: 113.5ms | ActiveRecord: 0.4ms)
